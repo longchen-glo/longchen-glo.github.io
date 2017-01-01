@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="记录点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈龙的博客">
-<meta property="og:url" content="http://chenlong.tech/index.html">
+<meta name="description" content="Base64
+Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+
+编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的编码解码以及加密方式总结">
+<meta property="og:url" content="http://chenlong.tech/2016/12/23/common-encode-and-decode/index.html">
 <meta property="og:site_name" content="陈龙的博客">
-<meta property="og:description" content="记录点滴">
+<meta property="og:description" content="Base64
+Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+
+编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
+<meta property="og:updated_time" content="2017-01-01T07:35:20.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈龙的博客">
-<meta name="twitter:description" content="记录点滴">
+<meta name="twitter:title" content="常见的编码解码以及加密方式总结">
+<meta name="twitter:description" content="Base64
+Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+
+编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
 
 
 
@@ -110,7 +120,7 @@
   };
 </script>
 
-  <title> 陈龙的博客 </title>
+  <title> 常见的编码解码以及加密方式总结 | 陈龙的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +240,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/23/common-encode-and-decode/" itemprop="url">
-                  常见的编码解码以及加密方式总结
-                </a>
+                常见的编码解码以及加密方式总结
               
             
           </h1>
@@ -301,26 +306,28 @@
       
 
       
-        
-          <h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h2><blockquote>
+        <h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h2><blockquote>
 <p>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。</p>
 </blockquote>
 <h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">BASE64Encrypt</span><span class="params">(<span class="keyword">byte</span>[] key)</span> </span>&#123;</div><div class="line">    String edata = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        edata = (<span class="keyword">new</span> BASE64Encoder()).encodeBuffer(key).trim();</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        LOGGER.error(e.getMessage(), e);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> edata;</div><div class="line">&#125;</div><div class="line"><span class="comment">// EncryptUtil.BASE64Encrypt(data.getBytes("utf-8"))</span></div></pre></td></tr></table></figure>
 <p>根据RFC 822规定，每76个字符，还需要加上一个回车换行。但是在实际使用中通常采用非标准处理方式忽略这些换行符。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/23/common-encode-and-decode/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (edata != <span class="keyword">null</span>) &#123;</div><div class="line">    <span class="keyword">return</span> edata.replaceAll(</div><div class="line">        System.getProperty(<span class="string">"line.separator"</span>), <span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] BASE64Decrypt(String data) &#123;</div><div class="line">    <span class="keyword">if</span> (data == <span class="keyword">null</span>)</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">byte</span>[] edata = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        edata = (<span class="keyword">new</span> BASE64Decoder()).decodeBuffer(data);</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        LOGGER.error(e.getMessage(), e);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> edata;</div><div class="line">&#125;</div><div class="line"><span class="comment">// String decrypted = new String(edata, "utf-8");</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -328,364 +335,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/04/2016-8-goal/" rel="next" title="我的博客再次启用">
+                <i class="fa fa-chevron-left"></i> 我的博客再次启用
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/04/2016-8-goal/" itemprop="url">
-                  我的博客再次启用
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-04T21:32:42+08:00" content="2016-08-04">
-              2016-08-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/talk/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/04/2016-8-goal/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/04/2016-8-goal/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>自从去年12月使用Hexo框架将Blog搭起来之后，只写过一篇文章。仲夏的八月，我又再次拾起，不得不说，经过这几个月之后，hexo也变得更方便使用了，尤其是github插件，让生成之后的静态文件发布变得更加容易。</p>
-<blockquote>
-<p>改变自己</p>
-</blockquote>
-<h2 id="回首"><a href="#回首" class="headerlink" title="回首"></a>回首</h2><p>毕业离校已经一个多月，工作也已经四个月了，回顾这几个月的工作与学习，自己也逐渐适应工作环境和熟悉工作内容。可是，似乎这段时间的工作内容过于重复与单调，对自己技术方面的长进帮助很少，或许没有经历过一个完整项目从零做起的过程。长进虽少，但也有所收获，值得肯定的是对Java的掌握更加深入，从去年十月份开始自己学习Java，这也将近一年的时间了。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/04/2016-8-goal/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/28/java-hashcode-equals/" itemprop="url">
-                  理解java.lang.Object类中hashCode()以及equals()方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-28T12:25:11+08:00" content="2015-12-28">
-              2015-12-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/28/java-hashcode-equals/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/28/java-hashcode-equals/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在Java中，Object类是类层次结构的根类。每个类都使用Object类作为超类，所有对象（包括数组）都实现这个类的方法。<br>Object类中的hashCode()和equals()方法需要我们理解一下。</p>
-<h2 id="hashCode-方法"><a href="#hashCode-方法" class="headerlink" title="hashCode()方法"></a>hashCode()方法</h2><p>Oracle JDK8中Source Code:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// returns a hash code value for the object.</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">native</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/28/java-hashcode-equals/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/26/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-26T20:39:04+08:00" content="2015-12-26">
-              2015-12-26
-            </time>
-          </span>
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/26/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -693,6 +368,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -712,8 +398,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars3.githubusercontent.com/u/13917586"
@@ -767,6 +462,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Base64"><span class="nav-number">1.</span> <span class="nav-text">Base64</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">1.1.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解码"><span class="nav-number">1.2.</span> <span class="nav-text">解码</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -870,6 +576,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
@@ -886,9 +596,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'chenlong-tech';
-      var disqus_identifier = 'index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = '2016/12/23/common-encode-and-decode/';
+      var disqus_title = '常见的编码解码以及加密方式总结';
+      var disqus_url = 'http://chenlong.tech/2016/12/23/common-encode-and-decode/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -899,6 +609,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
