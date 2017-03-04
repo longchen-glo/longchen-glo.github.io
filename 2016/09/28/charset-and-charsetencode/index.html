@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -84,33 +84,33 @@
 
 
 
-<meta name="description" content="Base64
-Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+<meta name="description" content="前言平时在项目过程中经常会遇到乱码的情况，彻底了解字符编码的原理能够帮助我们解决乱码问题。
+字符集计算机存储信息是使用二进制的方式，字符集则是约定了一种字符与二进制数值之间的转换关系。字符集只是一个规则集合的名字，对应到真实生活中，字符集就是对某种语言的称呼。例如：英语，汉语，日语。对于一个字符集来说要正确编码转码一个字符需要三个关键元素：字库表、编码字符集、字符编码。
 
-编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
+字库表代表字符集所能表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常见的编码解码以及加密方式总结">
-<meta property="og:url" content="http://chenlong.tech/2016/12/23/common-encode-and-decode/index.html">
+<meta property="og:title" content="理清字符编码的问题，有关UTF-8和Unicode的关系">
+<meta property="og:url" content="http://chenlong.tech/2016/09/28/charset-and-charsetencode/index.html">
 <meta property="og:site_name" content="陈龙的博客">
-<meta property="og:description" content="Base64
-Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+<meta property="og:description" content="前言平时在项目过程中经常会遇到乱码的情况，彻底了解字符编码的原理能够帮助我们解决乱码问题。
+字符集计算机存储信息是使用二进制的方式，字符集则是约定了一种字符与二进制数值之间的转换关系。字符集只是一个规则集合的名字，对应到真实生活中，字符集就是对某种语言的称呼。例如：英语，汉语，日语。对于一个字符集来说要正确编码转码一个字符需要三个关键元素：字库表、编码字符集、字符编码。
 
-编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
-<meta property="og:updated_time" content="2017-01-01T07:35:20.924Z">
+字库表代表字符集所能表示">
+<meta property="og:updated_time" content="2017-02-10T02:22:14.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常见的编码解码以及加密方式总结">
-<meta name="twitter:description" content="Base64
-Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。
+<meta name="twitter:title" content="理清字符编码的问题，有关UTF-8和Unicode的关系">
+<meta name="twitter:description" content="前言平时在项目过程中经常会遇到乱码的情况，彻底了解字符编码的原理能够帮助我们解决乱码问题。
+字符集计算机存储信息是使用二进制的方式，字符集则是约定了一种字符与二进制数值之间的转换关系。字符集只是一个规则集合的名字，对应到真实生活中，字符集就是对某种语言的称呼。例如：英语，汉语，日语。对于一个字符集来说要正确编码转码一个字符需要三个关键元素：字库表、编码字符集、字符编码。
 
-编码12345678910public static String BASE64Encrypt(byte[] key) &amp;#123;    String edata = null;    tr">
+字库表代表字符集所能表示">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -120,7 +120,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
   };
 </script>
 
-  <title> 常见的编码解码以及加密方式总结 | 陈龙的博客 </title>
+  <title> 理清字符编码的问题，有关UTF-8和Unicode的关系 | 陈龙的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -141,7 +141,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -193,6 +193,16 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -240,7 +250,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
             
             
               
-                常见的编码解码以及加密方式总结
+                理清字符编码的问题，有关UTF-8和Unicode的关系
               
             
           </h1>
@@ -252,38 +262,19 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-23T19:29:27+08:00" content="2016-12-23">
-              2016-12-23
+            <time itemprop="dateCreated" datetime="2016-09-28T20:47:19+08:00" content="2016-09-28">
+              2016-09-28
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/23/common-encode-and-decode/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/12/23/common-encode-and-decode/" itemprop="commentsCount"></span>
+                <a href="/2016/09/28/charset-and-charsetencode/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/28/charset-and-charsetencode/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -294,6 +285,11 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
           
           
 
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
           
         </div>
       </header>
@@ -306,14 +302,16 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
       
 
       
-        <h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h2><blockquote>
-<p>Base64是一种基于64个可打印字符来表示二进制数据的表示方法。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9，这样共有62个字符，此外两个可打印符号在不同的系统中而不同。</p>
-</blockquote>
-<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">BASE64Encrypt</span><span class="params">(<span class="keyword">byte</span>[] key)</span> </span>&#123;</div><div class="line">    String edata = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        edata = (<span class="keyword">new</span> BASE64Encoder()).encodeBuffer(key).trim();</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        LOGGER.error(e.getMessage(), e);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> edata;</div><div class="line">&#125;</div><div class="line"><span class="comment">// EncryptUtil.BASE64Encrypt(data.getBytes("utf-8"))</span></div></pre></td></tr></table></figure>
-<p>根据RFC 822规定，每76个字符，还需要加上一个回车换行。但是在实际使用中通常采用非标准处理方式忽略这些换行符。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>平时在项目过程中经常会遇到乱码的情况，彻底了解字符编码的原理能够帮助我们解决乱码问题。</p>
+<h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><p>计算机存储信息是使用二进制的方式，字符集则是约定了一种字符与二进制数值之间的转换关系。<br>字符集只是一个规则集合的名字，对应到真实生活中，字符集就是对某种语言的称呼。例如：英语，汉语，日语。<br>对于一个字符集来说要正确编码转码一个字符需要三个关键元素：字库表、编码字符集、字符编码。</p>
+<ul>
+<li>字库表代表字符集所能表示字符的范围，相当于字符的数据库。</li>
+<li>编码字符集即使用一个编码值来来表示字符在字符表中的位置，一个字符对应一个序号值。</li>
+<li>字符编码则是将编码字符集真正表示为存储在计算机中的二进制数值的方式。有可能为编码字符集中的序号值通过规定的存储规则，进而添加相应的标志位存储在计算机中。</li>
+</ul>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (edata != <span class="keyword">null</span>) &#123;</div><div class="line">    <span class="keyword">return</span> edata.replaceAll(</div><div class="line">        System.getProperty(<span class="string">"line.separator"</span>), <span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] BASE64Decrypt(String data) &#123;</div><div class="line">    <span class="keyword">if</span> (data == <span class="keyword">null</span>)</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">byte</span>[] edata = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        edata = (<span class="keyword">new</span> BASE64Decoder()).decodeBuffer(data);</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        LOGGER.error(e.getMessage(), e);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> edata;</div><div class="line">&#125;</div><div class="line"><span class="comment">// String decrypted = new String(edata, "utf-8");</span></div></pre></td></tr></table></figure>
+<h2 id="Java中的字符编解码"><a href="#Java中的字符编解码" class="headerlink" title="Java中的字符编解码"></a>Java中的字符编解码</h2><p>Java中的字符串使用的编码字符集是Unicode，具体是字符编码使用GBK还是UTF-8或者其他没有具体的规定。</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>有关字符集和字符编码的具体说明可以参考这篇文档<a href="http://cenalulu.github.io/linux/character-encoding" target="_blank" rel="external">十分钟搞清字符集和字符编码</a>，文章说的十分详细，并且有举例说明。</p>
 
       
     </div>
@@ -345,6 +343,10 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/23/common-encode-and-decode/" rel="prev" title="常见的编码解码以及加密方式总结">
+                常见的编码解码以及加密方式总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -419,7 +421,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -433,6 +435,13 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
             </div>
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -469,7 +478,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Base64"><span class="nav-number">1.</span> <span class="nav-text">Base64</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">1.1.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解码"><span class="nav-number">1.2.</span> <span class="nav-text">解码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符集"><span class="nav-number">2.</span> <span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的字符编解码"><span class="nav-number">3.</span> <span class="nav-text">Java中的字符编解码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li></ol></div>
             
           </div>
         </section>
@@ -502,11 +511,27 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i> 访问人数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i> 总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
 
         
       </div>
@@ -568,13 +593,6 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
@@ -596,9 +614,9 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
 
     <script type="text/javascript">
       var disqus_shortname = 'chenlong-tech';
-      var disqus_identifier = '2016/12/23/common-encode-and-decode/';
-      var disqus_title = '常见的编码解码以及加密方式总结';
-      var disqus_url = 'http://chenlong.tech/2016/12/23/common-encode-and-decode/';
+      var disqus_identifier = '2016/09/28/charset-and-charsetencode/';
+      var disqus_title = '理清字符编码的问题，有关UTF-8和Unicode的关系';
+      var disqus_url = 'http://chenlong.tech/2016/09/28/charset-and-charsetencode/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -627,3 +645,7 @@ Base64是一种基于64个可打印字符来表示二进制数据的表示方法
 
 </body>
 </html>
+<!-- 背景动画 -->
+<!-- <script type="text/javascript" src="/js/src/particle.js"></script> -->
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
